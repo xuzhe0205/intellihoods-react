@@ -40,8 +40,8 @@ module.exports = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    host: "127.0.0.1",
-    port: 8888,
+    host: "www.intellihoods.com",
+    // port: 8888,
     contentBase: "./dist",
     hot: true
   }
