@@ -6,7 +6,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader"],
       },
       {
         test: /\.(?:le|c)ss$/,
@@ -15,34 +15,34 @@ module.exports = {
           {
             loader: require.resolve("css-loader"),
             options: {
-              importLoaders: 1
-            }
-          }
-        ]
+              importLoaders: 1,
+            },
+          },
+        ],
       },
       {
         test: /\.(pdf|jpg|jpeg|png|gif|svg|ico)$/,
         use: [
           {
-            loader: "url-loader"
-          }
-        ]
-      }
-    ]
+            loader: "url-loader",
+          },
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".jsx"],
   },
   output: {
     path: __dirname + "/dist",
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    host: "www.intellihoods.com",
+    host: "www.posthem.com",
     // port: 8888,
     contentBase: "./dist",
-    hot: true
-  }
+    hot: true,
+  },
 };
