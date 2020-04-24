@@ -9,16 +9,8 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(?:le|c)ss$/,
-        use: [
-          require.resolve("style-loader"),
-          {
-            loader: require.resolve("css-loader"),
-            options: {
-              importLoaders: 1,
-            },
-          },
-        ],
+        test: /\.(s*)css$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(pdf|jpg|jpeg|png|gif|svg|ico)$/,
@@ -31,7 +23,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx", ".scss"],
   },
   output: {
     path: __dirname + "/dist",
@@ -40,8 +32,8 @@ module.exports = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    host: "www.posthem.com",
-    // port: 8888,
+    host: "127.0.0.1",
+    port: 8888,
     contentBase: "./dist",
     hot: true,
   },
