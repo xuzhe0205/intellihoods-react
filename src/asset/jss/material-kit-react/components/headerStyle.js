@@ -40,7 +40,7 @@ const headerStyle = {
     zIndex: "1100",
   },
   container: {
-    ...container,
+    // ...container,
     minHeight: "50px",
     flex: "1",
     alignItems: "center",
@@ -58,11 +58,13 @@ const headerStyle = {
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",
+    fontWeight: "bold",
     padding: "8px 16px",
     letterSpacing: "unset",
     "&:hover,&:focus": {
-      color: "inherit",
-      background: "transparent",
+      color: "black",
+      fontWeight: "bold",
+      background: "white",
     },
   },
   appResponsive: {

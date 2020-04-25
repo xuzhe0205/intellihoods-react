@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className="homeDiv">
         <Header
-          brand="Material Kit React"
+          brand="Posthem"
           rightLinks={<HeaderLinks />}
           fixed
           color="transparent"
