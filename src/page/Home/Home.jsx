@@ -20,7 +20,9 @@ class Home extends Component {
           }}
           {...this.props}
         />
-        <Parallax image={require("../../asset/image/bg7.jpg")}></Parallax>
+        <Parallax
+          image={require("../../asset/image/lake-kid-phone.jpeg")}
+        ></Parallax>
         <section>wtf</section>
       </div>
     );

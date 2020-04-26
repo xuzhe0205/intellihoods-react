@@ -20,13 +20,17 @@ import Button from "../CustomButtons/Button";
 
 import styles from "../../asset/jss/material-kit-react/components/headerLinksStyle.js";
 
+import Signin from "../../user/login/Signin";
+
+import Signup from "../../user/signup/Signup";
+
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="Components"
@@ -48,16 +52,10 @@ export default function HeaderLinks(props) {
             </a>,
           ]}
         />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
+      </ListItem> */}
+      <ListItem className={classes.signinSignup}>
+        <Signin />
+        <Signup />
       </ListItem>
       <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
@@ -90,7 +88,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
+            href="https://www.facebook.com/zhe.xu.311/"
             target="_blank"
             className={classes.navLink}
           >
