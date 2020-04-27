@@ -150,7 +150,7 @@ class LocalSignup extends Component {
         <form className={useSignupStyles.form}>
           <CardBody>
             <CustomInput
-              labelText="First Name..."
+              labelText="Name"
               id="first"
               formControlProps={{
                 fullWidth: true,
@@ -165,7 +165,7 @@ class LocalSignup extends Component {
               }}
             />
             <CustomInput
-              labelText="Email..."
+              labelText="Email"
               id="email"
               formControlProps={{
                 fullWidth: true,

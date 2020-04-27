@@ -151,7 +151,7 @@ class LocalLogin extends Component {
         <form className={useLoginStyles.form}>
           <CardBody>
             <CustomInput
-              labelText="Email..."
+              labelText="Email"
               id="email"
               formControlProps={{
                 fullWidth: true,
