@@ -9,6 +9,16 @@ import {
 } from "../../material-kit-react";
 
 const buttonStyle = {
+  socials: {
+    width: "85%",
+    marginTop: "0",
+    transform: "none",
+    left: "0",
+    top: "0",
+    height: "3rem",
+    fontSize: "95%",
+    textTransform: "initial",
+  },
   button: {
     minHeight: "auto",
     minWidth: "auto",
