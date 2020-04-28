@@ -32,7 +32,7 @@ import Icon from "@material-ui/core/Icon";
 import loginStyles from "../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
 import Signup from "../signup/Signup";
 import SignupBody from "../signup/SignupBody";
-import SigninBody from "./SigninBody";
+import SigninBody from "./SigninBody.jsx";
 
 const useStyles = makeStyles(styles);
 const useModalStyles = makeStyles(modalStyles);

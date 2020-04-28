@@ -46,7 +46,7 @@ export default function Signup(props) {
   const buttonClasses = useButtonStyles();
   const signupClasses = useSignupStyles();
   const [open, setOpen] = React.useState(false);
-  const [hidden, setHidden] = React.useState(true);
+  const [curHidden, setCurHidden] = React.useState(true);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -54,8 +54,6 @@ export default function Signup(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
-  const body = <SignupBody />;
 
   return (
     <GridContainer>
@@ -79,12 +77,12 @@ export default function Signup(props) {
         keepMounted
         onClose={() => {
           setOpen(false);
-          setHidden(true);
+          setCurHidden(false);
         }}
         aria-labelledby="classic-modal-slide-title"
         aria-describedby="classic-modal-slide-description"
       >
-        {body}
+        <SignupBody curHidden={false} />
       </Dialog>
     </GridContainer>
   );

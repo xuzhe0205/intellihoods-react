@@ -9,9 +9,8 @@ class SignupBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: props.curHidden,
+      hidden: props.myhidden,
     };
-    console.log(this.state.hidden);
   }
   render() {
     const realSignupBody = (
@@ -35,7 +34,7 @@ class SignupBody extends Component {
         <br />
       </div>
     );
-    const signinBody = <SigninBody myhidden={true} />;
+    const signinBody = <SigninBody />;
     return (
       <div className="signup-container">
         {this.state.hidden ? signinBody : realSignupBody}

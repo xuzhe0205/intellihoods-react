@@ -15,7 +15,7 @@ class SigninBody extends Component {
     this.setState({ hidden: newProps.myhidden });
   }
   render() {
-    const signupBody = <SignupBody />;
+    const signupBody = <SignupBody curHidden={false} />;
     const body = (
       <div className="login-content">
         <h2 className="login-title">Welcome back.</h2>
