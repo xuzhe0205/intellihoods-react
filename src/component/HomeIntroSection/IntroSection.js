@@ -27,7 +27,7 @@ export default function IntroSection() {
     <div className={classes.sections}>
       <div className={classes.container}>
         <div className={classes.title}>
-          <h2>Educational, casual, joyful -- Posthem </h2>
+          <h1>Educational, casual, joyful </h1>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8}>
               <Button color="primary">Default</Button>
