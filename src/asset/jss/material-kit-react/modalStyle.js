@@ -3,7 +3,9 @@ const modalStyle = {
     borderRadius: "6px",
     width: "100%",
     boxShadow: "0 1px 11px #F7F7F8",
-    height: "72%",
+    overflow: "auto",
+    height: "auto",
+    display: "block",
   },
   modalHeader: {
     borderBottom: "none",
