@@ -29,7 +29,10 @@ class SigninBody extends Component {
           onClick={() => this.setState({ hidden: false })}
         >
           No account?
-          <b style={{ color: `#69904E`, cursor: `pointer` }}> Sign up! </b>
+          <b style={{ color: `#69904E`, cursor: `pointer` }}>
+            {" "}
+            &nbsp; Sign up!
+          </b>
         </span>
         <br />
         <br />

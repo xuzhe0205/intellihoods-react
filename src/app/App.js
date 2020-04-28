@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Button, Alert } from "@material-ui/core";
 import Home from "../page/Home/Home";
-import Signup from "../user/signup/Signup";
+import Profile from "../user/profile/Profile";
 
 import "./App.scss";
 
@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/signup" exact component={Signup} />
+          <Route path="/profile" exact component={Profile} />
         </Switch>
       </div>
     );

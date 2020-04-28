@@ -20,24 +20,52 @@ export default function LocalSignup() {
 }
 
 class LocalSignupComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errMsg: "",
+      username: "",
+      email: "",
+      password: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  doLocalSignup(event) {}
+  handleInputChange(event) {
+    const target = event.target;
+    const inputName = target.name;
+    const inputValue = target.value;
+    this.setState({
+      [inputName]: inputValue,
+    });
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    const signUpRequest = Object.assign({}, this.state);
+    console.log(signUpRequest);
+  }
   render() {
     return (
       <Card style={{ marginTop: `10px` }}>
-        <form className={useSignupStyles.form}>
+        <form className={useSignupStyles.form} onSubmit={this.handleSubmit}>
           <CardBody>
             <CustomInput
-              labelText="Name"
+              labelText="Username"
               id="first"
               formControlProps={{
                 fullWidth: true,
               }}
               inputProps={{
+                name: "username",
                 type: "text",
                 endAdornment: (
                   <InputAdornment position="end">
                     <People className={useSignupStyles.inputIconsColor} />
                   </InputAdornment>
                 ),
+                onChange: this.handleInputChange,
+                value: this.state.username,
               }}
             />
             <CustomInput
@@ -47,12 +75,15 @@ class LocalSignupComponent extends Component {
                 fullWidth: true,
               }}
               inputProps={{
+                name: "email",
                 type: "email",
                 endAdornment: (
                   <InputAdornment position="end">
                     <Email className={useSignupStyles.inputIconsColor} />
                   </InputAdornment>
                 ),
+                onChange: this.handleInputChange,
+                value: this.state.email,
               }}
             />
             <CustomInput
@@ -62,6 +93,7 @@ class LocalSignupComponent extends Component {
                 fullWidth: true,
               }}
               inputProps={{
+                name: "password",
                 type: "password",
                 endAdornment: (
                   <InputAdornment position="end">
@@ -70,6 +102,8 @@ class LocalSignupComponent extends Component {
                     </Icon>
                   </InputAdornment>
                 ),
+                onChange: this.handleInputChange,
+                value: this.state.password,
                 autoComplete: "off",
               }}
             />
@@ -84,6 +118,7 @@ class LocalSignupComponent extends Component {
             <Button
               color="success"
               style={{ textTransform: "Initial", fontSize: "14px" }}
+              type="submit"
             >
               Sign up
             </Button>

@@ -11,7 +11,9 @@ class SignupBody extends Component {
     this.state = {
       hidden: props.curHidden,
     };
-    console.log(this.state.hidden);
+  }
+  componentWillReceiveProps(newProps) {
+    this.setState({ hidden: newProps.curHidden });
   }
   render() {
     const realSignupBody = (
@@ -28,7 +30,7 @@ class SignupBody extends Component {
             style={{ color: `#69904E`, cursor: `pointer` }}
             onClick={() => this.setState({ hidden: true })}
           >
-            Sign in!
+            &nbsp; Sign in!
           </b>
         </span>
         <br />
