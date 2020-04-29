@@ -13,6 +13,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import People from "@material-ui/icons/People";
 import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
+import { signup } from "../../util/APIUtils";
 
 const useSignupStyles = makeStyles(signupStyles);
 export default function LocalSignup() {
@@ -23,15 +24,13 @@ class LocalSignupComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errMsg: "",
-      username: "",
+      name: "",
       email: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-  doLocalSignup(event) {}
   handleInputChange(event) {
     const target = event.target;
     const inputName = target.name;
@@ -43,7 +42,17 @@ class LocalSignupComponent extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const signUpRequest = Object.assign({}, this.state);
-    console.log(signUpRequest);
+    signup(signUpRequest)
+      .then((response) => {
+        alert("You're successfully registered. Please login to continue!");
+        // this.props.history.push("/login");
+      })
+      .catch((error) => {
+        alert(
+          (error && error.message) ||
+            "Oops! Something went wrong. Please try again!"
+        );
+      });
   }
   render() {
     return (
@@ -57,7 +66,7 @@ class LocalSignupComponent extends Component {
                 fullWidth: true,
               }}
               inputProps={{
-                name: "username",
+                name: "name",
                 type: "text",
                 endAdornment: (
                   <InputAdornment position="end">
@@ -65,7 +74,7 @@ class LocalSignupComponent extends Component {
                   </InputAdornment>
                 ),
                 onChange: this.handleInputChange,
-                value: this.state.username,
+                value: this.state.name,
               }}
             />
             <CustomInput
