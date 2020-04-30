@@ -45,6 +45,11 @@ class LocalSignupComponent extends Component {
     signup(signUpRequest)
       .then((response) => {
         alert("You're successfully registered. Please login to continue!");
+        this.setState({
+          name: "",
+          email: "",
+          password: "",
+        });
         // this.props.history.push("/login");
       })
       .catch((error) => {

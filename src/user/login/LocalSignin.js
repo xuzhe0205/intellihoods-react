@@ -12,6 +12,13 @@ import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
 import Button from "../../component/CustomButtons/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import { login } from "../../util/APIUtils";
+import {
+  GOOGLE_AUTH_URL,
+  FACEBOOK_AUTH_URL,
+  GITHUB_AUTH_URL,
+  ACCESS_TOKEN,
+} from "../../model/APIConstant";
 
 const useSigninStyles = makeStyles(signinStyles);
 export default function LoginSignin() {
@@ -19,10 +26,52 @@ export default function LoginSignin() {
 }
 
 class LocalSigninComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const inputName = target.name;
+    const inputValue = target.value;
+
+    this.setState({
+      [inputName]: inputValue,
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    const loginRequest = Object.assign({}, this.state);
+
+    login(loginRequest)
+      .then((response) => {
+        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+        alert("You're successfully logged in!");
+        this.setState({
+          email: "",
+          password: "",
+        });
+      })
+      .catch((error) => {
+        alert(
+          (error && error.message) ||
+            "Oops! Something went wrong. Please try again!"
+        );
+      });
+  }
+
   render() {
     return (
       <Card style={{ marginTop: `10px` }}>
-        <form className={useSigninStyles.form}>
+        <form className={useSigninStyles.form} onSubmit={this.handleSubmit}>
           <CardBody>
             <CustomInput
               labelText="Email"
@@ -31,12 +80,15 @@ class LocalSigninComponent extends Component {
                 fullWidth: true,
               }}
               inputProps={{
+                name: "email",
                 type: "email",
                 endAdornment: (
                   <InputAdornment position="end">
                     <Email className={useSigninStyles.inputIconsColor} />
                   </InputAdornment>
                 ),
+                onChange: this.handleInputChange,
+                value: this.state.email,
               }}
             />
             <CustomInput
@@ -46,6 +98,7 @@ class LocalSigninComponent extends Component {
                 fullWidth: true,
               }}
               inputProps={{
+                name: "password",
                 type: "password",
                 endAdornment: (
                   <InputAdornment position="end">
@@ -54,6 +107,8 @@ class LocalSigninComponent extends Component {
                     </Icon>
                   </InputAdornment>
                 ),
+                onChange: this.handleInputChange,
+                value: this.state.password,
                 autoComplete: "off",
               }}
             />
@@ -68,6 +123,7 @@ class LocalSigninComponent extends Component {
             <Button
               color="success"
               style={{ textTransform: "Initial", fontSize: "14px" }}
+              type="submit"
             >
               Sign in
             </Button>
