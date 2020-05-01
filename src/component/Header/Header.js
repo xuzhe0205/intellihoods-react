@@ -15,11 +15,16 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "../../asset/jss/material-kit-react/components/headerStyle.js";
+import SearchIcon from "@material-ui/icons/Search";
+import InputBase from "@material-ui/core/InputBase";
+import appBarHeaderStyle from "../../asset/jss/material-kit-react/components/appBarHeaderStyle";
 
 const useStyles = makeStyles(styles);
+const useAppBarHeaderStyles = makeStyles(appBarHeaderStyle);
 
 export default function Header(props) {
   const classes = useStyles();
+  const appBarHeaderClasses = useAppBarHeaderStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
@@ -74,6 +79,22 @@ export default function Header(props) {
             brandComponent
           )}
         </div>
+        <div className={appBarHeaderClasses.containerHorizontalAlignment}>
+          <div className={appBarHeaderClasses.search}>
+            <div className={appBarHeaderClasses.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search Posts"
+              classes={{
+                root: appBarHeaderClasses.inputRoot,
+                input: appBarHeaderClasses.inputInput,
+              }}
+              inputProps={{ "aria-label": "search" }}
+            />
+          </div>
+        </div>
+
         <Hidden smDown implementation="css">
           {rightLinks}
         </Hidden>

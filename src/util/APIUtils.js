@@ -38,11 +38,16 @@ export function getCurrentUser() {
 }
 
 export function login(loginRequest) {
-  return request({
-    url: API_BASE_URL + "/auth/login",
-    method: "POST",
-    body: JSON.stringify(loginRequest),
-  });
+  const request = axios.post(
+    API_BASE_URL + "/auth/login",
+    JSON.stringify(loginRequest),
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  return request;
 }
 
 export function signup(signupRequest) {

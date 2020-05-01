@@ -11,7 +11,6 @@ class ProfilePage extends Component {
   render() {
     return (
       <div className="profile-container">
-        testtest
         <div className="container">
           <div className="profile-info">
             <div className="profile-avatar">
@@ -48,4 +47,4 @@ const mapStateToProps = (state) => {
 
 const Profile = withRouter(connect(mapStateToProps)(ProfilePage));
 
-export default ProfilePage;
+export default Profile;

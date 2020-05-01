@@ -60,7 +60,7 @@ export default function Signup(props) {
       <Button
         color="transparent"
         target="_blank"
-        className={classes.signButton}
+        className={classes.signupButton}
         onClick={handleOpen}
       >
         Sign up

@@ -55,7 +55,7 @@ export default function Signin(props) {
       <Button
         color="transparent"
         target="_blank"
-        className={classes.signButton}
+        className={classes.signinButton}
         onClick={() => {
           setOpen(true);
         }}

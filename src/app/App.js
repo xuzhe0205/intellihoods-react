@@ -49,6 +49,7 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <div>{this.state.authenticated ? <p>show header</p> : null}</div>
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute

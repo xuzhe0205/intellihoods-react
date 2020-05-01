@@ -6,6 +6,7 @@ import styles from "../../asset/jss/material-kit-react/views/components.js";
 import classNames from "classnames";
 import IntroSection from "../../component/HomeIntroSection/IntroSection";
 import "./Home.scss";
+import Footer from "../../component/Footer/Footer";
 
 class Home extends Component {
   render() {
@@ -37,6 +38,8 @@ class Home extends Component {
         <div style={introDivStyle}>
           <IntroSection></IntroSection>
         </div>
+        <br />
+        <Footer />
       </div>
     );
   }

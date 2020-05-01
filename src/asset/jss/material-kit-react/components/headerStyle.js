@@ -40,7 +40,7 @@ const headerStyle = {
     zIndex: "1100",
   },
   container: {
-    // ...container,
+    ...container,
     minHeight: "50px",
     flex: "1",
     alignItems: "center",
@@ -49,7 +49,7 @@ const headerStyle = {
     flexWrap: "nowrap",
   },
   flex: {
-    flex: 1,
+    flex: "1",
   },
   title: {
     ...defaultFont,

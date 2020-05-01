@@ -36,6 +36,7 @@ const headerLinksStyle = (theme) => ({
   signinSignup: {
     float: "left",
     color: "inherit",
+
     position: "relative",
     display: "block",
     width: "auto",
@@ -53,8 +54,36 @@ const headerLinksStyle = (theme) => ({
       },
     },
   },
-  signButton: {
+  signinButton: {
     color: "inherit",
+    position: "relative",
+    padding: "0.9375rem",
+    fontWeight: "bold",
+    fontSize: "15px",
+    textTransform: "uppercase",
+    borderRadius: "5px",
+    lineHeight: "20px",
+    textDecoration: "none",
+    marginRight: "15px",
+    display: "inline-flex",
+    "&:hover,&:focus": {
+      color: "inherit",
+      background: "#69904E",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "calc(100% - 30px)",
+      marginLeft: "15px",
+      marginBottom: "8px",
+      marginTop: "8px",
+      textAlign: "left",
+      "& > span:first-child": {
+        justifyContent: "flex-start",
+      },
+    },
+  },
+  signupButton: {
+    color: "#F7F7F8",
+    backgroundColor: "#69904E",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "bold",
@@ -67,7 +96,7 @@ const headerLinksStyle = (theme) => ({
     display: "inline-flex",
     "&:hover,&:focus": {
       color: "inherit",
-      background: "#69904E",
+      background: "#509A3F",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",
