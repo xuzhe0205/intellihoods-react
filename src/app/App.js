@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import { Button, Alert } from "@material-ui/core";
-import Home from "../page/Home/Home";
+import LandingPage from "../page/LandingPage/LandingPage";
 import Profile from "../user/profile/Profile";
 import OAuth2RedirectHandler from "../user/oauth2/OAuth2RedirectHandler";
 import "./App.scss";
 import PrivateRoute from "../common/PrivateRoute";
 import { getCurrentUser } from "../util/APIUtils";
 import LoadingIndicator from "../common/LoadingIndicator.js";
+import Home from "../page/Home/Home";
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class App extends Component {
         console.log(this.state.authenticated);
       })
       .catch((error) => {
-        alert("shit happens: " + error);
+        // alert("shit happens: " + error);
         this.setState({
           loading: false,
         });
@@ -51,7 +52,11 @@ class App extends Component {
       <div className="App">
         <div>{this.state.authenticated ? <p>show header</p> : null}</div>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/"
+            component={this.state.authenticated ? Home : LandingPage}
+          />
           <PrivateRoute
             path="/profile"
             authenticated={this.state.authenticated}

@@ -5,32 +5,40 @@ const componentsStyle = {
   brand: {
     color: "#FFFFFF",
     textAlign: "center",
-    marginTop: "-20rem",
+    marginTop: "-16rem",
   },
   title: {
     "@media (min-width: 577px)": {
-      fontSize: "4rem",
+      fontSize: "4.2rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "1.48rem",
+      fontSize: "1.5rem",
     },
-    fontFamily: "minion pro",
+    fontFamily: "Times New Roman",
     color: "#FFFAFA",
     fontWeight: "600",
     display: "inline-block",
     position: "relative",
   },
   landingPageExploreBtn: {
+    "@media (min-width: 577px)": {
+      fontSize: "1.3rem",
+      width: "15rem",
+    },
+    "@media (max-width: 576px)": {
+      fontSize: "1.2rem",
+      width: "15rem",
+    },
     color: "#FFFAFA",
-    width: "8rem",
+
     backgroundColor: "#05a87d",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "bold",
-    fontSize: "15px",
-    textTransform: "uppercase",
+    fontFamily: "Source Sans Pro",
+    textTransform: "initial",
     borderRadius: "5px",
-    lineHeight: "15px",
+    lineHeight: "20px",
     textDecoration: "none",
     margin: "0px",
     display: "inline-flex",
@@ -40,9 +48,16 @@ const componentsStyle = {
     },
   },
   subtitle: {
-    fontSize: "1.313rem",
+    "@media (min-width: 577px)": {
+      fontSize: "1.5rem",
+    },
+    "@media (max-width: 576px)": {
+      fontSize: "1rem",
+    },
     color: "#FFFAFA",
-    margin: "0 0 20px",
+    margin: "20px 0 40px",
+    fontWeight: "bold",
+    fontFamily: "Source Sans Pro",
   },
   main: {
     background: "#FFFFFF",
