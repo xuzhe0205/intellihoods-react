@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Signin.css";
+import "./Signin.scss";
 import signinStyles from "../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
 import Card from "../../component/Card/Card";
 import CardHeader from "../../component/Card/CardHeader";

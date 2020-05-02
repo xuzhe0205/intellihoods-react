@@ -9,7 +9,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
@@ -32,7 +32,7 @@ module.exports = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    host: "127.0.0.1",
+    host: "10.0.0.179",
     port: 8888,
     contentBase: "./dist",
     hot: true,

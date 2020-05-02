@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LocalSignup from "./LocalSignup";
 import SocialSignup from "./SocialSignup";
-import "./Signup.css";
+import "./Signup.scss";
 import "../login/SigninBody";
 import SigninBody from "../login/SigninBody";
 

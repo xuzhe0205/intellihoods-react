@@ -52,11 +52,7 @@ class App extends Component {
       <div className="App">
         <div>{this.state.authenticated ? <p>show header</p> : null}</div>
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={this.state.authenticated ? Home : LandingPage}
-          />
+          <Route exact path="/" component={LandingPage} />
           <PrivateRoute
             path="/profile"
             authenticated={this.state.authenticated}

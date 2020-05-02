@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Signup.css";
+import "./Signup.scss";
 import Button from "../../component/CustomButtons/Button";
 import buttonStyles from "../../asset/jss/material-kit-react/components/buttonStyle";
 

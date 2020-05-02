@@ -5,14 +5,19 @@ const componentsStyle = {
   brand: {
     color: "#FFFFFF",
     textAlign: "center",
-    marginTop: "-16rem",
+    "@media (min-width: 577px)": {
+      marginTop: "-16rem",
+    },
+    "@media (max-width: 576px)": {
+      marginTop: "-10rem",
+    },
   },
   title: {
     "@media (min-width: 577px)": {
       fontSize: "4.2rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "1.5rem",
+      fontSize: "2rem",
     },
     fontFamily: "Times New Roman",
     color: "#FFFAFA",
@@ -52,7 +57,7 @@ const componentsStyle = {
       fontSize: "1.5rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "1rem",
+      fontSize: "1.1rem",
     },
     color: "#FFFAFA",
     margin: "20px 0 40px",

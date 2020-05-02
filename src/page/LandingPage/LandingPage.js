@@ -3,7 +3,6 @@ import Header from "../../component/Header/Header";
 import HeaderLinks from "../../component/Header/HeaderLinks";
 import Parallax from "../../component/Parallax/Parallax";
 import styles from "../../asset/jss/material-kit-react/views/components.js";
-import classNames from "classnames";
 import IntroSection from "../../component/HomeIntroSection/IntroSection";
 import "./LandingPage.scss";
 import Footer from "../../component/Footer/Footer";
@@ -17,15 +16,6 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const introDivStyle = {
-    background: "#FFFFFF",
-    position: "relative",
-    zIndex: "3",
-    margin: "-70px 30px 0px",
-    borderRadius: "6px",
-    boxShadow:
-      "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
-  };
   const landingPageStyle = {};
   return (
     <div>
@@ -66,7 +56,7 @@ export default function LandingPage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div style={introDivStyle}>
+      <div id="introDivStyle">
         <IntroSection></IntroSection>
       </div>
       <br />

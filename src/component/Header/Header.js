@@ -94,18 +94,13 @@ export default function Header(props) {
             />
           </div>
         </div>
-
         <Hidden smDown implementation="css">
           {rightLinks}
         </Hidden>
         <Hidden mdUp>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-          >
-            <Menu />
-          </IconButton>
+          <Button color="inherit" onClick={handleDrawerToggle}>
+            <i className={" fa fa-user-circle"} style={{ fontSize: "30px" }} />
+          </Button>
         </Hidden>
       </Toolbar>
       <Hidden mdUp implementation="js">

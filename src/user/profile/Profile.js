@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Profile.css";
+import "./Profile.scss";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
