@@ -5,11 +5,14 @@ const componentsStyle = {
   brand: {
     color: "#FFFFFF",
     textAlign: "center",
-    "@media (min-width: 577px)": {
-      marginTop: "-16rem",
+    "@media (min-width: 1000px)": {
+      marginTop: "-16rem !important",
     },
-    "@media (max-width: 576px)": {
-      marginTop: "-10rem",
+    "@media screen and (min-height: 810px), screen and (max-height: 1000px)": {
+      marginTop: "-12rem",
+    },
+    "@media screen and (max-height: 700px)": {
+      marginTop: "-5rem",
     },
   },
   title: {
