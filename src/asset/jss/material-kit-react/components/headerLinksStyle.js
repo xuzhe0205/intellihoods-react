@@ -69,7 +69,7 @@ const headerLinksStyle = (theme) => ({
     display: "inline-flex",
     "&:hover,&:focus": {
       color: "#3E3E3E",
-      background: "#CACACA",
+      background: "#E3E2DF",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",

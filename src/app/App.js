@@ -33,6 +33,7 @@ class App extends Component {
           loading: false,
         });
         console.log(this.state.authenticated);
+        console.log(this.state.currentUser);
       })
       .catch((error) => {
         // alert("shit happens: " + error);
@@ -50,9 +51,18 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div>{this.state.authenticated ? <p>show header</p> : null}</div>
         <Switch>
-          <Route exact path="/" component={LandingPage} />
+          {this.state.authenticated ? (
+            <PrivateRoute
+              exact
+              path="/"
+              authenticated={this.state.authenticated}
+              currentUser={this.state.currentUser}
+              component={Home}
+            />
+          ) : (
+            <Route exact path="/" component={LandingPage} />
+          )}
           <PrivateRoute
             path="/profile"
             authenticated={this.state.authenticated}
