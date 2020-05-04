@@ -37,6 +37,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm i chart.js` & `npm i react-chartjs-2`
+
+This is for importing `chart.js` to use in react.js
+
+### `npm i react-countup`
+
+This is for importing `CountUp.js` is a dependency-free, lightweight JavaScript class that can be used to quickly create animations that display numerical data in a more interesting way.
+
+### `npm install --save-dev empty-module` and add plugins in `webpack.config.js`
+
+This is for resolving the compiling warning: `Module not found: Error: Can't resolve './locale'`
+
+### `npm install --save-dev @babel/plugin-transform-runtime`
+
+This is for resolving the uncaught ReferenceError: `regeneratorRuntime is not defined`
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

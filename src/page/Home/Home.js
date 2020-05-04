@@ -13,6 +13,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Button from "../../component/CustomButtons/Button.js";
 import CustomDropdown from "../../component/CustomDropdown/CustomDropdown.js";
 import Email from "@material-ui/icons/Email";
+import CovidApp from "../../component/Covid19/CovidApp";
 
 const useStyles = makeStyles(styles);
 export default function Home(props) {
@@ -93,6 +94,7 @@ export default function Home(props) {
         }
       />
       <div>home content body</div>
+      <CovidApp />
     </div>
   );
 }

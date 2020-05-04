@@ -30,7 +30,15 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ContextReplacementPlugin(
+      /\.\/locale$/,
+      "empty-module",
+      false,
+      /js$/
+    ),
+  ],
   devServer: {
     host: "localhost",
     port: 8888,
