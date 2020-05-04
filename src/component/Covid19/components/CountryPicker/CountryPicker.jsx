@@ -3,7 +3,7 @@ import { NativeSelect, FormControl } from "@material-ui/core";
 
 import { fetchCountries } from "../../../../publicAPI/covid19";
 
-import styles from "./CountryPicker.module.scss";
+import styles from "./CountryPicker.module.css";
 
 const Countries = ({ handleCountryChange }) => {
   const [countries, setCountries] = useState([]);
