@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo $PWD
             }
         }
         stage('Test') {
