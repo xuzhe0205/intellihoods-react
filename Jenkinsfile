@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     echo 'Building..'
-                    echo $(pwd)
+                    echo $(ls)
                 '''
             }
         }
