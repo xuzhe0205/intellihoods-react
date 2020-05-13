@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     echo 'Building..'
-                    echo $(ls)
+                    ./jenkins/build/bundle.sh
                 '''
             }
         }
