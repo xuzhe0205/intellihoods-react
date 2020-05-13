@@ -1,13 +1,10 @@
 pipeline {
     agent any
-    environment {
-        PASS = credentials('registry-pw') 
-    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo $PWD
+                echo $(pwd)
             }
         }
         stage('Test') {
