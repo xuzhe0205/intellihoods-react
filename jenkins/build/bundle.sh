@@ -1,5 +1,5 @@
 echo "****************************"
-echo "********Building Webpackssss********"
+echo "********Building Webpackdddddssss********"
 echo "****************************"
 
 npm install
