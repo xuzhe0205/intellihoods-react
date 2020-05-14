@@ -13,9 +13,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh '''#!/bin/bash
-                    
-                '''
             }
         }
         stage('Push'){
@@ -30,6 +27,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh '''#!/bin/bash
+                    ./jenkins/deploy/deploy.sh
                 '''
             }
         }
