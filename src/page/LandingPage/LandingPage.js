@@ -41,8 +41,8 @@ export default function LandingPage(props) {
                 <br />
                 <br />
                 <div className={classes.subtitle}>
-                  Get started now! Explore the extensive good posts we have
-                  here.
+                  Get startfdsfasaed now! Explore the extensive good posts we
+                  have here.
                 </div>
                 <Button
                   color="transparent"
