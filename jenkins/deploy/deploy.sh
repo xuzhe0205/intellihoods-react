@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test
 echo posthem-react-nginx > /tmp/.auth
 echo $BUILD_TAG >> /tmp/.auth
 echo Qiantu2013 >> /tmp/.auth
