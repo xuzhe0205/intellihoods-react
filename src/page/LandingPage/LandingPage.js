@@ -36,7 +36,7 @@ export default function LandingPage(props) {
             <GridItem>
               <div className={classes.brand}>
                 <h2 className={classes.title}>
-                  Share more wisdom <br /> Expand dimension of your life
+                  Share more wisdom <br /> Expand your life dimension
                 </h2>
                 <br />
                 <br />
