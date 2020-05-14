@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     echo 'Building..'
-                    ./jenkins/build/bundle.sh
+                    // ./jenkins/build/bundle.sh
                 '''
             }
         }
