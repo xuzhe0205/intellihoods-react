@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh '''#!/bin/bash
+                    ./jenkins/push/push.sh
                 '''
             }
         }
@@ -26,6 +27,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh '''#!/bin/bash
+                    ./jenkins/deploy/deploy.sh
                 '''
             }
         }
