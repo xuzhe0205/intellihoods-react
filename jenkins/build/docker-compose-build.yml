@@ -3,8 +3,9 @@ services:
   # 服务名称
   posthem-react-nginx:
     # 镜像:版本
-    image: nginx:latest
-
+    image: "posthem-react-nginx:$BUILD_TAG"
+    build:
+      context: docker-image
     # 映射容器80端口到本地80端口
     ports:
       - "80:80"
