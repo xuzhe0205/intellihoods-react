@@ -62,7 +62,7 @@ const headerStyle = {
     padding: "8px 16px",
     letterSpacing: "unset",
     "&:hover,&:focus": {
-      color: "black",
+      color: "#3E3E3E",
       fontWeight: "bold",
       background: "white",
     },
