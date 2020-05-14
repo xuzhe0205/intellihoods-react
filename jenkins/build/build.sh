@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy the dist/ to the build location
-cp -R dist jenkins/build/docker-image/dist
+cp -R dist jenkins/build/dist
 
 echo "****************************"
 echo "** Building Docker Image in Jenkins Image***"
