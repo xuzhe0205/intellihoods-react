@@ -7,6 +7,4 @@ echo "****************************"
 echo "** Building Docker Image in Jenkins Image***"
 echo "****************************"
 
-docker login -u xuzhe0205 -p Qiantu2013
-
 cd jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
