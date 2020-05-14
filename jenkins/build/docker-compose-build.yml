@@ -3,7 +3,7 @@ services:
   # 服务名称
   posthem-react-nginx:
     # 镜像:版本
-    image: "posthem-react-nginx:$BUILD_TAG"
+    image: "posthem-react-nginx:fuck"
     build:
       context: docker-image
     # 映射容器80端口到本地80端口
