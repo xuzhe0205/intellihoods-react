@@ -13,12 +13,16 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''#!/bin/bash
+                    
+                '''
             }
         }
         stage('Push'){
             steps {
                 echo 'Deploying....'
                 sh '''#!/bin/bash
+                    ./jenkins/push/push.sh
                 '''
             }
         }
