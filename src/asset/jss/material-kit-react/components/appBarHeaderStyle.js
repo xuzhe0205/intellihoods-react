@@ -51,6 +51,7 @@ const appBarHeaderStyle = (theme) => ({
       width: "30ch",
       "&:focus": {
         width: "50ch",
+        border: "0.5px solid #05a87d",
       },
     },
   },

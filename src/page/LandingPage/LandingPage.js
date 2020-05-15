@@ -20,7 +20,7 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
-        brand=""
+        brand="Posthem"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
