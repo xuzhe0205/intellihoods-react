@@ -7,4 +7,4 @@ echo Qiantu2013 >> /tmp/.auth
 
 scp -i /opt/zhekey.pem /tmp/.auth ubuntu@ec2-54-234-200-183.compute-1.amazonaws.com:/tmp/.auth
 scp -i /opt/zhekey.pem ./jenkins/deploy/publish.sh ubuntu@ec2-54-234-200-183.compute-1.amazonaws.com:/tmp/publish.sh
-ssh -vgit /opt/zhekey.pem ubuntu@ec2-54-234-200-183.compute-1.amazonaws.com "/tmp/publish.sh"
+ssh -i /opt/zhekey.pem ubuntu@ec2-54-234-200-183.compute-1.amazonaws.com "/tmp/publish.sh"
