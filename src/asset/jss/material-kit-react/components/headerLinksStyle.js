@@ -36,10 +36,9 @@ const headerLinksStyle = (theme) => ({
   signinSignup: {
     float: "left",
     color: "inherit",
-
+    width: "auto",
     position: "relative",
     display: "block",
-    width: "auto",
     margin: "0",
     padding: "0",
     [theme.breakpoints.down("sm")]: {
@@ -94,7 +93,6 @@ const headerLinksStyle = (theme) => ({
     borderRadius: "5px",
     lineHeight: "12px",
     textDecoration: "none",
-    margin: "0px",
     display: "inline-flex",
     "&:hover,&:focus": {
       color: "#FFFAFA",

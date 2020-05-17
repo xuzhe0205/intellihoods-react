@@ -16,7 +16,6 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const landingPageStyle = {};
   return (
     <div>
       <Header

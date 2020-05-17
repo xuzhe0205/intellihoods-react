@@ -3,7 +3,7 @@ import customCheckboxRadioSwitch from "../../customCheckboxRadioSwitch.js";
 
 const basicsStyle = {
   sections: {
-    padding: "70px 0",
+    padding: "40px 0",
   },
   container,
   title: {

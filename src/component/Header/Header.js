@@ -18,6 +18,8 @@ import styles from "../../asset/jss/material-kit-react/components/headerStyle.js
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import appBarHeaderStyle from "../../asset/jss/material-kit-react/components/appBarHeaderStyle";
+import headerLogo from "../../../dist/pt-logo.png";
+import "./Header.scss";
 
 const useStyles = makeStyles(styles);
 const useAppBarHeaderStyles = makeStyles(appBarHeaderStyle);
@@ -65,7 +67,12 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed,
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = (
+    <Button id="headerLogoBtn" className={classes.title}>
+      <div id="headerBrand">{brand}</div>
+      <img id="headerLogo" src={headerLogo} alt="Posthem header logo" />
+    </Button>
+  );
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

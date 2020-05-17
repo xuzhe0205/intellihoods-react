@@ -55,6 +55,8 @@ export default function HeaderLinks(props) {
       </ListItem> */}
       <ListItem className={classes.signinSignup}>
         <Signin />
+      </ListItem>
+      <ListItem className={classes.signinSignup}>
         <Signup />
       </ListItem>
     </List>

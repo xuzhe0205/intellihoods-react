@@ -9,10 +9,10 @@ const componentsStyle = {
       marginTop: "-16rem !important",
     },
     "@media screen and (min-height: 810px) and (max-height: 1000px) and (max-width: 1000px)": {
-      marginTop: "-12rem",
+      marginTop: "-10rem",
     },
     "@media screen and (max-height: 700px)": {
-      marginTop: "-5rem",
+      marginTop: "-3rem",
     },
   },
   title: {
@@ -20,7 +20,7 @@ const componentsStyle = {
       fontSize: "4.2rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "2rem",
+      fontSize: "2.1rem",
     },
     fontFamily: "Times New Roman",
     color: "#FFFAFA",
@@ -29,24 +29,19 @@ const componentsStyle = {
     position: "relative",
   },
   landingPageExploreBtn: {
-    "@media (min-width: 577px)": {
-      fontSize: "1.3rem",
-      width: "15rem",
-    },
-    "@media (max-width: 576px)": {
-      fontSize: "1.2rem",
-      width: "15rem",
-    },
+    fontSize: "1.3rem",
+    width: "20rem",
+
     color: "#FFFAFA",
 
     backgroundColor: "#05a87d",
     position: "relative",
     padding: "0.9375rem",
-    fontWeight: "bold",
     fontFamily: "Source Sans Pro",
     textTransform: "initial",
     borderRadius: "5px",
-    lineHeight: "20px",
+    lineHeight: "23px",
+    fontWeight: "530",
     textDecoration: "none",
     margin: "0px",
     display: "inline-flex",
@@ -60,7 +55,7 @@ const componentsStyle = {
       fontSize: "1.5rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "1.1rem",
+      fontSize: "1.2rem",
     },
     color: "#FFFAFA",
     margin: "20px 0 40px",
