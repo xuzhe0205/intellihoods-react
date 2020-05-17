@@ -8,11 +8,12 @@ const componentsStyle = {
     "@media screen and (min-width: 1000px)": {
       marginTop: "-16rem !important",
     },
-    "@media screen and (min-height: 810px) and (max-height: 1000px) and (max-width: 1000px)": {
-      marginTop: "-10rem",
+    "@media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)": {
+      /* styles */
+      marginTop: "-12rem",
     },
     "@media screen and (max-height: 700px)": {
-      marginTop: "-3rem",
+      marginTop: "-5rem",
     },
   },
   title: {
@@ -20,7 +21,7 @@ const componentsStyle = {
       fontSize: "4.2rem",
     },
     "@media (max-width: 576px)": {
-      fontSize: "2.1rem",
+      fontSize: "2rem",
     },
     fontFamily: "Times New Roman",
     color: "#FFFAFA",
