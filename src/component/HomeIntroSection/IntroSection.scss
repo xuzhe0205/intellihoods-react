@@ -11,6 +11,15 @@
   @media screen and (max-height: 700px) {
     font-size: 30px;
   }
+  /* iPhone XR*/
+  @media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+    /* styles */
+    font-size: 30px;
+  }
+  /* iPhone X and Xs Max */
+  @media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    font-size: 30px;
+  }
 }
 
 .normalArea {
@@ -30,6 +39,18 @@
 
   @media screen and (max-height: 700px) {
     max-width: 265px !important;
+    padding-top: 30px;
+  }
+
+  /* iPhone XR*/
+  @media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+    /* styles */
+    max-width: 280px !important;
+    padding-top: 30px;
+  }
+  /* iPhone X and Xs Max */
+  @media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    max-width: 280px !important;
     padding-top: 30px;
   }
 }

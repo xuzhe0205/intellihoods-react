@@ -2,6 +2,16 @@
   background: #fffafa;
   position: relative;
   z-index: 3;
+  /* iPhone XR */
+  @media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+    /* styles */
+    margin: -100px 20px 0px;
+    z-index: 3;
+  }
+  /* iPhone X and Xs Max */
+  @media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  }
+
   @media screen and (min-width: 1000px) {
     margin: -80px 30px 0px;
   }
