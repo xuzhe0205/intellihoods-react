@@ -18,7 +18,7 @@ import styles from "../../asset/jss/material-kit-react/components/headerStyle.js
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import appBarHeaderStyle from "../../asset/jss/material-kit-react/components/appBarHeaderStyle";
-import headerLogo from "../../../dist/pt-logo.png";
+import headerLogo from "../../asset/image/pt-logo.png";
 import "./Header.scss";
 
 const useStyles = makeStyles(styles);
