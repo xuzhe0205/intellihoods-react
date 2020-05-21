@@ -1,24 +1,22 @@
 import React, { Component } from "react";
 import "./Signin.scss";
-import signinStyles from "../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
-import Card from "../../component/Card/Card";
-import CardHeader from "../../component/Card/CardHeader";
-import CardBody from "../../component/Card/CardBody";
-import CardFooter from "../../component/Card/CardFooter";
-import CustomInput from "../../component/CustomInput/CustomInput";
+import signinStyles from "../../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
+import Card from "../../../component/Card/Card";
+import CardBody from "../../../component/Card/CardBody";
+import CardFooter from "../../../component/Card/CardFooter";
+import CustomInput from "../../../component/CustomInput/CustomInput";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import People from "@material-ui/icons/People";
 import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
-import Button from "../../component/CustomButtons/Button";
+import Button from "../../../component/CustomButtons/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import { login } from "../../util/APIUtils";
+import { login } from "../../../util/APIUtils";
 import {
   GOOGLE_AUTH_URL,
   FACEBOOK_AUTH_URL,
   GITHUB_AUTH_URL,
   ACCESS_TOKEN,
-} from "../../model/APIConstant";
+} from "../../../util/APIConstant";
 
 const useSigninStyles = makeStyles(signinStyles);
 export default function LoginSignin() {

@@ -1,4 +1,4 @@
-import { API_BASE_URL, ACCESS_TOKEN } from "../model/APIConstant";
+import { API_BASE_URL, ACCESS_TOKEN } from "./APIConstant";
 import axios from "axios";
 
 const request = (options) => {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ACCESS_TOKEN } from "../../model/APIConstant";
+import { ACCESS_TOKEN } from "../../../util/APIConstant";
 import { Redirect } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";

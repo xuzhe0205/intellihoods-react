@@ -20,9 +20,9 @@ import Button from "../CustomButtons/Button";
 
 import styles from "../../asset/jss/material-kit-react/components/headerLinksStyle.js";
 
-import Signin from "../../user/login/Signin";
+import Signin from "../User/login/Signin";
 
-import Signup from "../../user/signup/Signup";
+import Signup from "../User/signup/Signup";
 
 const useStyles = makeStyles(styles);
 

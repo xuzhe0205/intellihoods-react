@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import "./Signup.scss";
-import Button from "../../component/CustomButtons/Button";
+import Button from "../../CustomButtons/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import buttonStyles from "../../asset/jss/material-kit-react/components/buttonStyle";
-import signupStyles from "../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
-import Card from "../../component/Card/Card";
-import CardHeader from "../../component/Card/CardHeader";
-import CardBody from "../../component/Card/CardBody";
-import CardFooter from "../../component/Card/CardFooter";
-import CustomInput from "../../component/CustomInput/CustomInput";
+import buttonStyles from "../../../asset/jss/material-kit-react/components/buttonStyle";
+import signupStyles from "../../../asset/jss/material-kit-react/views/componentsSections/loginStyle.js";
+import Card from "../../Card/Card";
+import CardHeader from "../../Card/CardHeader";
+import CardBody from "../../Card/CardBody";
+import CardFooter from "../../Card/CardFooter";
+import CustomInput from "../../CustomInput/CustomInput";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import People from "@material-ui/icons/People";
 import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
-import { signup } from "../../util/APIUtils";
+import { signup } from "../../../util/APIUtils";
 
 const useSignupStyles = makeStyles(signupStyles);
 export default function LocalSignup() {

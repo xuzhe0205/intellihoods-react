@@ -5,7 +5,7 @@ import App from "./app/App";
 import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import reducer from "./store/reducer";
+import reducer from "./store/reducers/authReducer";
 import { BrowserRouter } from "react-router-dom";
 // import registerServiceWorker from "./registerdsddasdsaServiceWorker";
 

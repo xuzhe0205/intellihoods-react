@@ -1,13 +1,19 @@
 import React, { Component } from "react";
-import "./Signup.scss";
-import Button from "../../component/CustomButtons/Button";
-import buttonStyles from "../../asset/jss/material-kit-react/components/buttonStyle";
+import "./Signin.scss";
+import Button from "../../../component/CustomButtons/Button";
+import buttonStyles from "../../../asset/jss/material-kit-react/components/buttonStyle";
+import {
+  GOOGLE_AUTH_URL,
+  FACEBOOK_AUTH_URL,
+  GITHUB_AUTH_URL,
+  ACCESS_TOKEN,
+} from "../../../util/APIConstant";
 
-export default function SocialSignup() {
-  return <SocialSignupComponent />;
+export default function SocialSignin() {
+  return <SocialSigninComponent />;
 }
 
-class SocialSignupComponent extends Component {
+class SocialSigninComponent extends Component {
   render() {
     return (
       <div className="social-login">
@@ -19,7 +25,7 @@ class SocialSignupComponent extends Component {
           >
             <span style={{ marginRight: "-1rem", marginLeft: "0.8rem" }}>
               {" "}
-              Sign up with Facebook
+              Sign in with Facebook
             </span>
           </Button>
         </div>
@@ -28,8 +34,9 @@ class SocialSignupComponent extends Component {
             color="google"
             style={buttonStyles.socials}
             startIcon={<i className={" fa fa-google"} />}
+            href={GOOGLE_AUTH_URL}
           >
-            <span style={{ marginLeft: "1rem" }}>Sign up with Google</span>
+            <span style={{ marginLeft: "1rem" }}>Sign in with Google</span>
           </Button>
         </div>
         <div style={{ marginBottom: `2%` }}>
@@ -38,7 +45,7 @@ class SocialSignupComponent extends Component {
             style={buttonStyles.socials}
             startIcon={<i className={" fa fa-github"} />}
           >
-            <span style={{ marginLeft: "1rem" }}>Sign up with Github</span>
+            <span style={{ marginLeft: "1rem" }}>Sign in with Github</span>
           </Button>
         </div>
       </div>

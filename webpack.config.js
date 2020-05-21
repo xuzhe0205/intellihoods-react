@@ -53,7 +53,7 @@ module.exports = {
     ),
   ],
   devServer: {
-    host: "10.0.0.179",
+    host: "localhost",
     port: 8888,
     contentBase: "./dist",
     hot: true,

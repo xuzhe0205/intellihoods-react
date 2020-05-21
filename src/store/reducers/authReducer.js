@@ -1,4 +1,4 @@
-import * as actionTypes from "./types";
+import * as actionTypes from "../../util/AuthConstant";
 
 const initialState = {
   authenticated: false,
