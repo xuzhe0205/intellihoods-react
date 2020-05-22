@@ -1,13 +1,16 @@
-export const API_BASE_URL = "http://localhost:8081";
-export const ACCESS_TOKEN = "accessToken";
+import * as authActionConstant from "../../util/AuthConstant";
 
-export const OAUTH2_REDIRECT_URI = "http://localhost:3000/oauth2/redirect";
+export const socialSignin = () => {
+  return { type: authActionConstant.SOCIAL_SIGNIN };
+};
 
-export const GOOGLE_AUTH_URL =
-  API_BASE_URL + "/oauth2/authorize/google?redirect_uri=" + OAUTH2_REDIRECT_URI;
-export const FACEBOOK_AUTH_URL =
-  API_BASE_URL +
-  "/oauth2/authorize/facebook?redirect_uri=" +
-  OAUTH2_REDIRECT_URI;
-export const GITHUB_AUTH_URL =
-  API_BASE_URL + "/oauth2/authorize/github?redirect_uri=" + OAUTH2_REDIRECT_URI;
+export const signinSuccess = (message) => {
+  return { type: authActionConstant.SIGNIN_SUCCESS, data: message };
+};
+export const signinFail = (message) => {
+  return { type: authActionConstant.SIGNIN_FAIL, data: message };
+};
+
+export const localSignin = () => {
+  return { type: authActionConstant.LOCAL_SIGNIN };
+};

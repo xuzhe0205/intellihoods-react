@@ -2,14 +2,16 @@ import * as actionTypes from "../../util/AuthConstant";
 
 const initialState = {
   authenticated: false,
-  loading: false,
   currentUser: null,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.LOCAL_LOGIN:
-      return state;
+    case actionTypes.LOCAL_SIGNIN:
+      const newState = Object.assign({}, state);
+      newState.authenticated = true;
+      newState.currentUser = action.currentUser;
+      return newState;
     case actionTypes.LOCAL_SIGNUP:
       return {
         ...state,

@@ -1,5 +1,21 @@
+// Action Types
+
 export const GET_AUTH_TOKEN = "";
-export const LOCAL_LOGIN = "LOCAL_LOGIN";
+export const LOCAL_SIGNIN = "LOCAL_SIGNIN";
 export const LOCAL_SIGNUP = "LOCAL_SIGNUP";
-export const SOCIAL_LOGIN = "SOCIAL_LOGIN";
+export const SOCIAL_SIGNIN = "SOCIAL_SIGNIN";
 export const SOCIAL_SIGNUP = "SOCIAL_SIGNUP";
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+export const SIGNUP_FAIL = "SIGNUP_FAIL";
+export const SIGNIN_SUCCESS = "SIGNIN_SUCCESS";
+export const SIGNIN_FAIL = "SIGNIN_FAIL";
+export const GET_USER = "GET_USER";
+export const GET_USER_SUCCESS = "GET_USER_SUCCESS";
+export const GET_USER_FAIL = "GET_USER_FAIL";
+export const LOAD_DASHBOARD = "LOAD_DASHBOARD";
+export const LOAD_DASHBOARD_SUCCESS = "LOAD_DASHBOARD_SUCCESS";
+export const LOAD_DASHBOARD_FAIL = "LOAD_DASHBOARD_FAIL";
+export const SIGN_OUT = "SIGN_OUT";
+export const SIGN_OUT_SUCCESS = "SIGN_OUT_SUCCESS";
+export const SIGN_OUT_FAIL = "SIGN_OUT_FAIL";
+export const CLEAR_NOTIFICATION = "CLEAR_NOTIFICATION";

@@ -37,10 +37,10 @@ export function getCurrentUser() {
   });
 }
 
-export function login(loginRequest) {
+export function signin(signinRequest) {
   const request = axios.post(
     API_BASE_URL + "/auth/login",
-    JSON.stringify(loginRequest),
+    JSON.stringify(signinRequest),
     {
       headers: {
         "Content-Type": "application/json",

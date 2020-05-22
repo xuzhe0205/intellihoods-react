@@ -79,4 +79,11 @@ class App extends Component {
   }
 }
 
+// const mapStateToProps = (state) => {
+//   return {
+//     authenticated: state.auth.authenticated,
+//     currentUser: state.auth.currentUser
+//   }
+// }
+
 export default App;

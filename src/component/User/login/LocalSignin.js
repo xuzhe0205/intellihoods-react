@@ -10,19 +10,18 @@ import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
 import Button from "../../../component/CustomButtons/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import { login } from "../../../util/APIUtils";
+import { signin } from "../../../util/APIUtils";
 import {
   GOOGLE_AUTH_URL,
   FACEBOOK_AUTH_URL,
   GITHUB_AUTH_URL,
   ACCESS_TOKEN,
 } from "../../../util/APIConstant";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as authActionCreator from "../../../store/actionCreators/authActionCreator";
 
 const useSigninStyles = makeStyles(signinStyles);
-export default function LoginSignin() {
-  return <LocalSigninComponent />;
-}
-
 class LocalSigninComponent extends Component {
   constructor(props) {
     super(props);
@@ -47,23 +46,24 @@ class LocalSigninComponent extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    const loginRequest = Object.assign({}, this.state);
+    const signinRequest = Object.assign({}, this.state);
 
-    login(loginRequest)
-      .then((response) => {
-        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-        alert("You're successfully logged in!");
-        this.setState({
-          email: "",
-          password: "",
-        });
-      })
-      .catch((error) => {
-        alert(
-          (error && error.message) ||
-            "Oops! Something went wrong. Please try again!"
-        );
-      });
+    this.props.signin(signinRequest);
+    // signin(signinRequest)
+    //   .then((response) => {
+    //     localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+    //     alert("You're successfully logged in!");
+    //     this.setState({
+    //       email: "",
+    //       password: "",
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     alert(
+    //       (error && error.message) ||
+    //         "Oops! Something went wrong. Please try again!"
+    //     );
+    //   });
   }
 
   render() {
@@ -131,3 +131,14 @@ class LocalSigninComponent extends Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(
+    {
+      signin: authActionCreator.signin,
+    },
+    dispatch
+  );
+};
+
+export default connect(null, mapDispatchToProps)(LocalSigninComponent);
