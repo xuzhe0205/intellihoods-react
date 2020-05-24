@@ -14,11 +14,11 @@ import People from "@material-ui/icons/People";
 import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
 import { signup } from "../../../util/APIUtils";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as authActionCreator from "../../../store/actionCreators/authActionCreator";
 
 const useSignupStyles = makeStyles(signupStyles);
-export default function LocalSignup() {
-  return <LocalSignupComponent />;
-}
 
 class LocalSignupComponent extends Component {
   constructor(props) {
@@ -42,22 +42,23 @@ class LocalSignupComponent extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const signUpRequest = Object.assign({}, this.state);
-    signup(signUpRequest)
-      .then((response) => {
-        alert("You're successfully registered. Please login to continue!");
-        this.setState({
-          name: "",
-          email: "",
-          password: "",
-        });
-        // this.props.history.push("/login");
-      })
-      .catch((error) => {
-        alert(
-          (error && error.message) ||
-            "Oops! Something went wrong. Please try again!"
-        );
-      });
+    this.props.signup(signUpRequest);
+    // signup(signUpRequest)
+    //   .then((response) => {
+    //     alert("You're successfully registered. Please login to continue!");
+    //     this.setState({
+    //       name: "",
+    //       email: "",
+    //       password: "",
+    //     });
+    //     // this.props.history.push("/login");
+    //   })
+    //   .catch((error) => {
+    //     alert(
+    //       (error && error.message) ||
+    //         "Oops! Something went wrong. Please try again!"
+    //     );
+    //   });
   }
   render() {
     return (
@@ -142,3 +143,14 @@ class LocalSignupComponent extends Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(
+    {
+      signup: authActionCreator.signup,
+    },
+    dispatch
+  );
+};
+
+export default connect(null, mapDispatchToProps)(LocalSignupComponent);

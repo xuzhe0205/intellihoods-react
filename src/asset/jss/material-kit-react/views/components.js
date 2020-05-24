@@ -12,6 +12,9 @@ const componentsStyle = {
       /* styles */
       marginTop: "-12rem",
     },
+    "@media screen and (min-height: 810px) and (max-height: 1000px) and (max-width: 1000px)": {
+      marginTop: "-8rem",
+    },
     "@media screen and (max-height: 700px)": {
       marginTop: "-5rem",
     },

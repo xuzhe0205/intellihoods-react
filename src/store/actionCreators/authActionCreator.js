@@ -57,3 +57,32 @@ export const signin = (signinRequest) => {
       });
   };
 };
+
+export const signup = (signupRequest) => {
+  return (dispatch) => {
+    dispatch(auth.localSignup());
+    axios
+      .post(
+        authAPIConstant.API_BASE_URL + "/auth/signup",
+        JSON.stringify(signupRequest),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        console.log("check signup response");
+        console.log(response);
+        dispatch(auth.signupSuccess(response.data.message));
+        alert("You're successfully registered. Please login to continue!");
+      })
+      .catch((error) => {
+        dispatch(auth.signupFail(error));
+        alert(
+          (error && error.message) ||
+            "Oops! Something went wrong. Please try again!"
+        );
+      });
+  };
+};

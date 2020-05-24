@@ -8,14 +8,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.LOCAL_SIGNIN:
-      const newState = Object.assign({}, state);
-      newState.authenticated = true;
-      newState.currentUser = action.currentUser;
-      return newState;
+      return Object.assign({}, state, {
+        authenticated: true,
+        currentUser: action.currentUser,
+        test: "damn!",
+      });
     case actionTypes.LOCAL_SIGNUP:
-      return {
-        ...state,
-      };
+      return Object.assign({}, state, {
+        authenticated: true,
+        currentUser: action.currentUser,
+      });
+    case actionTypes.SIGNUP_SUCCESS:
+      return Object.assign({}, state, {
+        message: action.data,
+      });
     default:
       return state;
   }

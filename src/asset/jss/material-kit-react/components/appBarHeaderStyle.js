@@ -59,8 +59,8 @@ const appBarHeaderStyle = (theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "end",
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
     flex: 10,
   },
 });
