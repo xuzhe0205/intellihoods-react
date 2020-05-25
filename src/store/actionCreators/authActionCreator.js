@@ -72,9 +72,13 @@ export const signup = (signupRequest) => {
         }
       )
       .then((response) => {
-        console.log("check signup response");
+        console.log("check authactioncreator");
         console.log(response);
-        dispatch(auth.signupSuccess(response.data.message));
+        localStorage.setItem(
+          authAPIConstant.ACCESS_TOKEN,
+          response.data.data.accessToken
+        );
+        dispatch(auth.signupSuccess(response.data.success));
         alert("You're successfully registered. Please login to continue!");
       })
       .catch((error) => {

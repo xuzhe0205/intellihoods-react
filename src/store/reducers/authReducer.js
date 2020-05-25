@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
       });
     case actionTypes.SIGNUP_SUCCESS:
       return Object.assign({}, state, {
-        message: action.data,
+        success: action.data,
       });
     default:
       return state;

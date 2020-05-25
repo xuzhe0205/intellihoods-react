@@ -9,6 +9,7 @@ import PrivateRoute from "../common/PrivateRoute";
 import { getCurrentUser } from "../util/APIUtils";
 import LoadingIndicator from "../common/LoadingIndicator.js";
 import Home from "../page/Home/Home";
+import Redirect from "../page/Redirect/Redirect";
 
 class App extends Component {
   constructor(props) {
@@ -73,6 +74,7 @@ class App extends Component {
             path="/oauth2/redirect"
             component={OAuth2RedirectHandler}
           ></Route>
+          <Route path="/signup/redirect" component={Redirect}></Route>
         </Switch>
       </div>
     );

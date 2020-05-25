@@ -17,10 +17,13 @@ import { signup } from "../../../util/APIUtils";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as authActionCreator from "../../../store/actionCreators/authActionCreator";
+import PropTypes from "prop-types";
+import * as authActionConstant from "../../../util/AuthConstant";
+import { Redirect } from "react-router-dom";
 
 const useSignupStyles = makeStyles(signupStyles);
 
-class LocalSignupComponent extends Component {
+export class LocalSignupComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,6 +46,7 @@ class LocalSignupComponent extends Component {
     event.preventDefault();
     const signUpRequest = Object.assign({}, this.state);
     this.props.signup(signUpRequest);
+    alert(this.props.success);
     // signup(signUpRequest)
     //   .then((response) => {
     //     alert("You're successfully registered. Please login to continue!");
@@ -61,6 +65,15 @@ class LocalSignupComponent extends Component {
     //   });
   }
   render() {
+    if (this.props.success === true) {
+      return (
+        <Redirect
+          to={{
+            pathname: "/signup/redirect",
+          }}
+        />
+      );
+    }
     return (
       <Card style={{ marginTop: `10px` }}>
         <form className={useSignupStyles.form} onSubmit={this.handleSubmit}>
@@ -144,6 +157,16 @@ class LocalSignupComponent extends Component {
   }
 }
 
+LocalSignupComponent.propTypes = {
+  success: PropTypes.bool,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    success: state.auth.success,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
@@ -153,4 +176,7 @@ const mapDispatchToProps = (dispatch) => {
   );
 };
 
-export default connect(null, mapDispatchToProps)(LocalSignupComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LocalSignupComponent);
