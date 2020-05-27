@@ -11,7 +11,6 @@ const loginStyle = {
     backgroundPosition: "top center",
     backgroundSize: "cover",
     margin: "0",
-    border: "0",
     display: "flex",
     alignItems: "center",
     backgroundImage: "url(" + image + ")",
