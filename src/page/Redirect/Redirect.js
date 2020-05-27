@@ -9,6 +9,7 @@ import CustomInput from "../../component/CustomInput/CustomInput";
 import styles from "../../asset/jss/material-kit-react/views/componentsSections/redirectStyle";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
+import RedirectProfileCard from "../../component/RedirectProfileCard/RedirectProfileCard";
 
 class Redirect extends Component {
   constructor(props) {
@@ -57,31 +58,7 @@ class Redirect extends Component {
         <div style={styles.section}>
           <div style={styles.container} id="modalContainer">
             <Card id="redirectCard">
-              <CardHeader>
-                <br />
-                <h2>Your Info</h2>
-              </CardHeader>
-              <CardBody>
-                <CustomInput
-                  labelText="Your bio here..."
-                  id="pass"
-                  formControlProps={{
-                    fullWidth: true,
-                  }}
-                  inputProps={{
-                    name: "bio",
-                    onChange: this.handleInputChange,
-                    value: this.state.password,
-                    autoComplete: "off",
-                  }}
-                  white={{ color: `#fffafa` }}
-                />
-                <h3>Upload a file</h3>
-                <h4 style={{ color: "red" }}>{this.state.error}</h4>
-                <h4 style={{ color: "green" }}>{this.state.msg}</h4>
-                <input onChange={this.onFileChange} type="file"></input>
-                <button onClick={this.uploadFile}>Upload</button>
-              </CardBody>
+              <RedirectProfileCard />
             </Card>
           </div>
         </div>
